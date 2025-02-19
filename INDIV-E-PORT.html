@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Student Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .page {
+            display: none;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        #home {
+            display: flex;
+            background-image: url('https://cdnb.artstation.com/p/assets/images/images/054/246/017/large/brian-cosmos-futuristic-cityscape-cyberpunk-synthwave-8k-high-details-8ffa1ade-900e-40f1-abb8-2699e03619ed.jpg?1664109189'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-size: 30px;
+        }
+        #about {
+            background: linear-gradient(to right, red, black);
+            color: white;
+        }
+        #profile, #achievements {
+            background-color: #f4f4f4;
+            color: black;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+        h2 {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .nav button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('about')">About Me</button>
+        <button onclick="showPage('profile')">Profile</button>
+        <button onclick="showPage('achievements')">Achievements</button>
+    </div>
+
+    <div id="home" class="page" style="display: flex;">
+        <h1 style="font-family: 'Courier New', monospace;">Information Technology Student Portfolio</h1>
+    </div>
+
+    <div id="about" class="page">
+        <h1>About Me</h1>
+        <p>Hello! I am Joel Abad, a Grade 12-STEM SHS Student, interested in learning about coding and technology.</p>
+        <p>I love creating projects and websites.</p>
+        <p>My goal is to become a skilled Data Scientist in the future.</p>
+    </div>
+
+    <div id="profile" class="page">
+        <img src="https://github.com/soitmapuauniv/IT/blob/main/IMG_30642.jpg?raw=true" alt="Profile Picture">
+        <h1><strong>Profile</strong></h1>
+        <h2>Full Name: Joel Abad</h2>
+        <h2>Email: jpabad@mymail.mapua.edu.ph</h2>
+        <h2>Degree/Program: Grade 12-STEM</h2>
+        <h2>School: Mapua University</h2>
+    </div>
+
+    <div id="achievements" class="page">
+        <h1><strong>Achievements</strong></h1>
+        <img src="https://github.com/soitmapuauniv/IT/blob/main/IMG_30642.jpg?raw=true" alt="Achievement Image">
+        <ul>
+            <li>🏆 With Honors A.Y. 2019-2022</li>
+            <li>🎓 Best in English</li>
+            <li>💻 Completed a Data Science Internship</li>
+            <li>📝 Published a Research Paper on The Effect of Screentime on the Academic Performance of Students</li>
+        </ul>
+    </div>
+
+    <script>
+        function showPage(page) {
+            let pages = document.getElementsByClassName('page');
+            for (let i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            document.getElementById(page).style.display = 'flex';
+        }
+    </script>
+
+</body>
+</html>
